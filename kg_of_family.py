@@ -22,8 +22,8 @@ with open('family_data.csv', 'r') as csvfile:
         name = row['Name']
         age = row['Age']
         gender = row['Gender']
-        parent1 = row['Parent1']
-        parent2 = row['Parent2']
+        father = row['Father']
+        mother = row['Mother']
         spouse = row['Spouse']
         children = row['Children']
         occupation = row['Occupation']
@@ -43,28 +43,37 @@ with open('family_data.csv', 'r') as csvfile:
         g.add((person_uri, fam.residesInCity, Literal(city)))
         g.add((person_uri, fam.residesInCountry, Literal(country)))
 
-        # Add parent1 info if present in data
-        if parent1:
+        # Add father info if present in data
+        if father:
             #linking the parent with the uri.
-            parent1_uri = fam[parent1.strip()]
-            g.add((person_uri, fam.hasParent, parent1_uri))
-            g.add((parent1_uri, rdf.type, fam.Parent))
-            g.add((parent1_uri, rdfs.label, Literal(parent1)))
+            father_uri = fam[father.strip()]
+            g.add((person_uri, fam.hasFather, father_uri))
+            #defining inverse relationships
+            g.add((father_uri, fam.isFatherOf,person_uri ))
+            g.add((father_uri, rdf.type, fam.Parent))
+            g.add((father_uri, rdfs.label, Literal(father)))
 
-        # Add parent2 info if present in data
-        if parent2:
+        # Add mother info if present in data
+        if mother:
             #linking the parent with the uri.
-            parent2_uri = fam[parent2.strip()]
-            g.add((person_uri, fam.hasParent, parent2_uri))
-            g.add((parent2_uri, rdf.type, fam.Parent))
-            g.add((parent2_uri, rdfs.label, Literal(parent2)))
+            mother_uri = fam[mother.strip()]
+            g.add((person_uri, fam.hasMother, mother_uri))
+            #defining inverse relationships
+            g.add((mother_uri, fam.isMotherOf,person_uri ))
+            g.add((mother_uri, rdf.type, fam.Parent))
+            g.add((mother_uri, rdfs.label, Literal(mother)))
 
         # Add spouse info if present in data
         if spouse:
             spouse_uri = fam[spouse.strip()]
-            g.add((person_uri, fam.hasSpouse, spouse_uri))
-            g.add((spouse_uri, rdf.type, fam.Person))
-            g.add((spouse_uri, rdfs.label, Literal(spouse)))
+            if gender == "Male":
+                g.add((person_uri, fam.hasWife, spouse_uri))
+                g.add((spouse_uri, rdf.type, fam.Person))
+                g.add((spouse_uri, rdfs.label, Literal(spouse)))
+            elif gender == "Female":
+                g.add((person_uri, fam.hasHusband, spouse_uri))
+                g.add((spouse_uri, rdf.type, fam.Person))
+                g.add((spouse_uri, rdfs.label, Literal(spouse)))
 
         # Add children info if present in data
         if children:
@@ -77,5 +86,5 @@ with open('family_data.csv', 'r') as csvfile:
                 g.add((child_uri, rdfs.label, Literal(child)))
 
 # Serializing the graph into turtle format to query using SPARQL
-output_file = "family_graph.turtle"
+output_file = "family_graph.ttl"
 g.serialize(destination=output_file, format="turtle")

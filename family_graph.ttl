@@ -1,0 +1,89 @@
+@prefix fam: <http://kandula.com/family> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fam:Atharv a fam:Person ;
+    rdfs:label "Atharv" .
+
+fam:Rishu a fam:Person ;
+    rdfs:label "Rishu" .
+
+fam:Samatha a fam:Person ;
+    rdfs:label "Samatha" .
+
+fam:Shanti a fam:Person ;
+    rdfs:label "Shanti",
+        "Shanti " ;
+    fam:age "30" ;
+    fam:gender "Female" ;
+    fam:hasChild fam:Rishu ;
+    fam:hasHusband fam:Anil ;
+    fam:occupation "Homemaker" ;
+    fam:residesInCity "Hyderabad" ;
+    fam:residesInCountry "India" .
+
+fam:Rakesh a fam:Person ;
+    rdfs:label "Rakesh" ;
+    fam:age "24" ;
+    fam:gender "Male" ;
+    fam:hasFather fam:Venkateswarlu ;
+    fam:hasMother fam:Renuka ;
+    fam:occupation "Student" ;
+    fam:residesInCity "Fairborn" ;
+    fam:residesInCountry "USA" .
+
+fam:Renuka a fam:Parent,
+        fam:Person ;
+    rdfs:label "Renuka" ;
+    fam:age "50" ;
+    fam:gender "Female" ;
+    fam:hasChild fam:Anil,
+        fam:Rakesh,
+        fam:Satish ;
+    fam:hasHusband fam:Venkateswarlu ;
+    fam:isMotherOf fam:Anil,
+        fam:Rakesh,
+        fam:Satish ;
+    fam:occupation "Homemaker" ;
+    fam:residesInCity "Khammam" ;
+    fam:residesInCountry "India" .
+
+fam:Satish a fam:Person ;
+    rdfs:label "Satish",
+        "Satish " ;
+    fam:age "30" ;
+    fam:gender "Male" ;
+    fam:hasFather fam:Venkateswarlu ;
+    fam:hasMother fam:Renuka ;
+    fam:hasWife fam:Samatha ;
+    fam:occupation "Self Employed" ;
+    fam:residesInCity "Khammam" ;
+    fam:residesInCountry "India" .
+
+fam:Venkateswarlu a fam:Parent,
+        fam:Person ;
+    rdfs:label "Venkateswarlu" ;
+    fam:age "60" ;
+    fam:gender "Male" ;
+    fam:hasChild fam:Anil,
+        fam:Rakesh,
+        fam:Satish ;
+    fam:hasWife fam:Renuka ;
+    fam:isFatherOf fam:Anil,
+        fam:Rakesh,
+        fam:Satish ;
+    fam:occupation "Farmer" ;
+    fam:residesInCity "Khammam" ;
+    fam:residesInCountry "India" .
+
+fam:Anil a fam:Person ;
+    rdfs:label "Anil" ;
+    fam:age "32" ;
+    fam:gender "Male" ;
+    fam:hasChild fam:Atharv ;
+    fam:hasFather fam:Venkateswarlu ;
+    fam:hasMother fam:Renuka ;
+    fam:hasWife fam:Shanti ;
+    fam:occupation "Product Manager" ;
+    fam:residesInCity "Hyderabad" ;
+    fam:residesInCountry "India" .
+
