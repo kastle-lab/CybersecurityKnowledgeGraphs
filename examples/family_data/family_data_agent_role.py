@@ -5,6 +5,7 @@ from rdflib import Graph, Namespace, RDF, RDFS, URIRef, Literal, XSD
 g = Graph()
 
 # Defining the RDF namespaces
+# we can define all namespaces in one dictionary.
 fam = Namespace("http://kandula.com/family#")
 schema = Namespace("http://schema.org/")
 rdf = RDF
@@ -12,6 +13,7 @@ rdfs = RDFS
 time = Namespace("http://www.w3.org/2006/time#")
 
 # Bind the prefixes into the graph
+# Multiple usage of bind can be eliminated by using for loop and dict
 g.bind("fam", fam)
 g.bind("schema", schema)
 g.bind("rdf", rdf)
