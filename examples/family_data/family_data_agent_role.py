@@ -91,6 +91,7 @@ with open('Agent_Role_Data.csv', 'r') as csvfile:
             father_uri = fam[father.strip()]
             g.add((person_uri, schema.father, father_uri))
             # Defining inverse relationships
+            #Inverse relationship of the father to child begins at the birth date of child
             g.add((father_uri, fam.isFatherOf, person_uri))
             g.add((father_uri, rdf.type, schema.Person))
             g.add((father_uri, rdfs.label, Literal(father,datatype=XSD.string)))
@@ -101,6 +102,7 @@ with open('Agent_Role_Data.csv', 'r') as csvfile:
             mother_uri = fam[mother.strip()]
             g.add((person_uri, schema.mother, mother_uri))
             # Defining inverse relationships
+            #Inverse relationship of the mother to child begins at the birth date of child
             g.add((mother_uri, fam.isMotherOf, person_uri))
             g.add((mother_uri, rdf.type, schema.Person))
             g.add((mother_uri, rdfs.label, Literal(mother,datatype=XSD.string)))
