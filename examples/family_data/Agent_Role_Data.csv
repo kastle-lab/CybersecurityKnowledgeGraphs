@@ -1,0 +1,9 @@
+Name,Age,Gender,DOB,Father,Mother,Spouse,Children,Occupation,Parent_TE,Marriage_TE
+Venkateswarlu,60,Male,1964,,,Renuka,"Anil,Satish,Rakesh",Farmer,1989,1985
+Renuka,50,Female,1974,,,Venkateswarlu,"Anil,Satish,Rakesh",Homemaker,1989,1985
+Anil,34,Male,1989,Venkateswarlu,Renuka,Shanti,Atharv,Product Manager,2021,2019
+Satish ,32,Male,1991,Venkateswarlu,Renuka,Samatha,,SelfEmployed,,2022
+Rakesh,24,Male,1999,Venkateswarlu,Renuka,,,Student,,
+Shanti,32,Female,1991,,,Anil,Atharv,Homemaker,2021,2019
+Samatha,22,Female,2000,,,Satish,,Student,,2022
+Atharv,2,Male,2021,Anil,Shanti,,,Student,,

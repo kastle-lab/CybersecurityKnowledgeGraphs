@@ -1,0 +1,211 @@
+@prefix fam: <http://kandula.com/family#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fam:Anil_ChildRole a time:Interval ;
+    time:hasBeginning fam:Anil_ChildRole_Begin .
+
+fam:Anil_ChildRole_Begin a time:Instant ;
+    time:inXSDDate "1989"^^xsd:gYear .
+
+fam:Anil_FatherRole a time:Interval ;
+    time:hasBeginning fam:Anil_FatherRole_Begin .
+
+fam:Anil_FatherRole_Begin a time:Instant ;
+    time:inXSDDate "2021"^^xsd:gYear .
+
+fam:Anil_MarriageRole a time:Interval ;
+    time:hasBeginning fam:Anil_MarriageRole_Begin .
+
+fam:Anil_MarriageRole_Begin a time:Instant ;
+    time:inXSDDate "2019"^^xsd:gYear .
+
+fam:Atharv_ChildRole a time:Interval ;
+    time:hasBeginning fam:Atharv_ChildRole_Begin .
+
+fam:Atharv_ChildRole_Begin a time:Instant ;
+    time:inXSDDate "2021"^^xsd:gYear .
+
+fam:Rakesh_ChildRole a time:Interval ;
+    time:hasBeginning fam:Rakesh_ChildRole_Begin .
+
+fam:Rakesh_ChildRole_Begin a time:Instant ;
+    time:inXSDDate "1999"^^xsd:gYear .
+
+fam:Renuka_ChildRole a time:Interval ;
+    time:hasBeginning fam:Renuka_ChildRole_Begin .
+
+fam:Renuka_ChildRole_Begin a time:Instant ;
+    time:inXSDDate "1974"^^xsd:gYear .
+
+fam:Renuka_MarriageRole a time:Interval ;
+    time:hasBeginning fam:Renuka_MarriageRole_Begin .
+
+fam:Renuka_MarriageRole_Begin a time:Instant ;
+    time:inXSDDate "1985"^^xsd:gYear .
+
+fam:Renuka_MotherRole a time:Interval ;
+    time:hasBeginning fam:Renuka_MotherRole_Begin .
+
+fam:Renuka_MotherRole_Begin a time:Instant ;
+    time:inXSDDate "1989"^^xsd:gYear .
+
+fam:Samatha a schema1:Person ;
+    rdfs:label "Samatha" ;
+    schema1:dateOfBirth "2000-01-01"^^xsd:date ;
+    schema1:gender "Female" ;
+    schema1:hasAge 22 ;
+    schema1:hasHusband fam:Satish ;
+    schema1:hasRole fam:Samatha_ChildRole,
+        fam:Samatha_MarriageRole .
+
+fam:Samatha_ChildRole a time:Interval ;
+    time:hasBeginning fam:Samatha_ChildRole_Begin .
+
+fam:Samatha_ChildRole_Begin a time:Instant ;
+    time:inXSDDate "2000"^^xsd:gYear .
+
+fam:Samatha_MarriageRole a time:Interval ;
+    time:hasBeginning fam:Samatha_MarriageRole_Begin .
+
+fam:Samatha_MarriageRole_Begin a time:Instant ;
+    time:inXSDDate "2022"^^xsd:gYear .
+
+fam:Satish_ChildRole a time:Interval ;
+    time:hasBeginning fam:Satish_ChildRole_Begin .
+
+fam:Satish_ChildRole_Begin a time:Instant ;
+    time:inXSDDate "1991"^^xsd:gYear .
+
+fam:Satish_MarriageRole a time:Interval ;
+    time:hasBeginning fam:Satish_MarriageRole_Begin .
+
+fam:Satish_MarriageRole_Begin a time:Instant ;
+    time:inXSDDate "2022"^^xsd:gYear .
+
+fam:Shanti_ChildRole a time:Interval ;
+    time:hasBeginning fam:Shanti_ChildRole_Begin .
+
+fam:Shanti_ChildRole_Begin a time:Instant ;
+    time:inXSDDate "1991"^^xsd:gYear .
+
+fam:Shanti_MarriageRole a time:Interval ;
+    time:hasBeginning fam:Shanti_MarriageRole_Begin .
+
+fam:Shanti_MarriageRole_Begin a time:Instant ;
+    time:inXSDDate "2019"^^xsd:gYear .
+
+fam:Shanti_MotherRole a time:Interval ;
+    time:hasBeginning fam:Shanti_MotherRole_Begin .
+
+fam:Shanti_MotherRole_Begin a time:Instant ;
+    time:inXSDDate "2021"^^xsd:gYear .
+
+fam:Venkateswarlu_ChildRole a time:Interval ;
+    time:hasBeginning fam:Venkateswarlu_ChildRole_Begin .
+
+fam:Venkateswarlu_ChildRole_Begin a time:Instant ;
+    time:inXSDDate "1964"^^xsd:gYear .
+
+fam:Venkateswarlu_FatherRole a time:Interval ;
+    time:hasBeginning fam:Venkateswarlu_FatherRole_Begin .
+
+fam:Venkateswarlu_FatherRole_Begin a time:Instant ;
+    time:inXSDDate "1989"^^xsd:gYear .
+
+fam:Venkateswarlu_MarriageRole a time:Interval ;
+    time:hasBeginning fam:Venkateswarlu_MarriageRole_Begin .
+
+fam:Venkateswarlu_MarriageRole_Begin a time:Instant ;
+    time:inXSDDate "1985"^^xsd:gYear .
+
+fam:Shanti a schema1:Person ;
+    rdfs:label "Shanti" ;
+    fam:isMotherOf fam:Atharv ;
+    schema1:dateOfBirth "1991-01-01"^^xsd:date ;
+    schema1:gender "Female" ;
+    schema1:hasAge 32 ;
+    schema1:hasChild fam:Atharv ;
+    schema1:hasHusband fam:Anil ;
+    schema1:hasRole fam:Shanti_ChildRole,
+        fam:Shanti_MarriageRole,
+        fam:Shanti_MotherRole .
+
+fam:Atharv a schema1:Person ;
+    rdfs:label "Atharv" ;
+    schema1:dateOfBirth "2021-01-01"^^xsd:date ;
+    schema1:father fam:Anil ;
+    schema1:gender "Male" ;
+    schema1:hasAge 2 ;
+    schema1:hasRole fam:Atharv_ChildRole ;
+    schema1:mother fam:Shanti .
+
+fam:Rakesh a schema1:Person ;
+    rdfs:label "Rakesh" ;
+    schema1:dateOfBirth "1999-01-01"^^xsd:date ;
+    schema1:father fam:Venkateswarlu ;
+    schema1:gender "Male" ;
+    schema1:hasAge 24 ;
+    schema1:hasRole fam:Rakesh_ChildRole ;
+    schema1:mother fam:Renuka .
+
+fam:Renuka a schema1:Person ;
+    rdfs:label "Renuka" ;
+    fam:isMotherOf fam:Anil,
+        fam:Rakesh,
+        fam:Satish ;
+    schema1:dateOfBirth "1974-01-01"^^xsd:date ;
+    schema1:gender "Female" ;
+    schema1:hasAge 50 ;
+    schema1:hasChild fam:Anil,
+        fam:Rakesh,
+        fam:Satish ;
+    schema1:hasHusband fam:Venkateswarlu ;
+    schema1:hasRole fam:Renuka_ChildRole,
+        fam:Renuka_MarriageRole,
+        fam:Renuka_MotherRole .
+
+fam:Venkateswarlu a schema1:Person ;
+    rdfs:label "Venkateswarlu" ;
+    fam:isFatherOf fam:Anil,
+        fam:Rakesh,
+        fam:Satish ;
+    schema1:dateOfBirth "1964-01-01"^^xsd:date ;
+    schema1:gender "Male" ;
+    schema1:hasAge 60 ;
+    schema1:hasChild fam:Anil,
+        fam:Rakesh,
+        fam:Satish ;
+    schema1:hasRole fam:Venkateswarlu_ChildRole,
+        fam:Venkateswarlu_FatherRole,
+        fam:Venkateswarlu_MarriageRole ;
+    schema1:hasWife fam:Renuka .
+
+fam:Satish a schema1:Person ;
+    rdfs:label "Satish",
+        "Satish " ;
+    schema1:dateOfBirth "1991-01-01"^^xsd:date ;
+    schema1:father fam:Venkateswarlu ;
+    schema1:gender "Male" ;
+    schema1:hasAge 32 ;
+    schema1:hasRole fam:Satish_ChildRole,
+        fam:Satish_MarriageRole ;
+    schema1:hasWife fam:Samatha ;
+    schema1:mother fam:Renuka .
+
+fam:Anil a schema1:Person ;
+    rdfs:label "Anil" ;
+    fam:isFatherOf fam:Atharv ;
+    schema1:dateOfBirth "1989-01-01"^^xsd:date ;
+    schema1:father fam:Venkateswarlu ;
+    schema1:gender "Male" ;
+    schema1:hasAge 34 ;
+    schema1:hasChild fam:Atharv ;
+    schema1:hasRole fam:Anil_ChildRole,
+        fam:Anil_FatherRole,
+        fam:Anil_MarriageRole ;
+    schema1:hasWife fam:Shanti ;
+    schema1:mother fam:Renuka .
+
