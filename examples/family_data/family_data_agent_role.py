@@ -41,9 +41,9 @@ with open('Agent_Role_Data.csv', 'r') as csvfile:
 
         # Adding triples related to the person
         g.add((person_uri, rdf.type, schema.Person))
-        g.add((person_uri, rdfs.label, Literal(name)))
+        g.add((person_uri, rdfs.label, Literal(name,datatype=XSD.string)))
         g.add((person_uri, schema.hasAge, Literal(age, datatype=XSD.integer)))
-        g.add((person_uri, schema.gender, Literal(gender)))
+        g.add((person_uri, schema.gender, Literal(gender,datatype=XSD.string)))
         g.add((person_uri, schema.dateOfBirth, Literal(dob, datatype=XSD.date)))
 
         # Define temporal extent for father role, it just has the start time
@@ -91,7 +91,7 @@ with open('Agent_Role_Data.csv', 'r') as csvfile:
             # Defining inverse relationships
             g.add((father_uri, fam.isFatherOf, person_uri))
             g.add((father_uri, rdf.type, schema.Person))
-            g.add((father_uri, rdfs.label, Literal(father)))
+            g.add((father_uri, rdfs.label, Literal(father,datatype=XSD.string)))
 
         # Add mother info if present in data
         if mother:
@@ -101,7 +101,7 @@ with open('Agent_Role_Data.csv', 'r') as csvfile:
             # Defining inverse relationships
             g.add((mother_uri, fam.isMotherOf, person_uri))
             g.add((mother_uri, rdf.type, schema.Person))
-            g.add((mother_uri, rdfs.label, Literal(mother)))
+            g.add((mother_uri, rdfs.label, Literal(mother,datatype=XSD.string)))
 
         # Add spouse info if present in data
         if spouse:
@@ -109,11 +109,11 @@ with open('Agent_Role_Data.csv', 'r') as csvfile:
             if gender == "Male":
                 g.add((person_uri, schema.hasWife, spouse_uri))
                 g.add((spouse_uri, rdf.type, schema.Person))
-                g.add((spouse_uri, rdfs.label, Literal(spouse)))
+                g.add((spouse_uri, rdfs.label, Literal(spouse,datatype=XSD.string)))
             elif gender == "Female":
                 g.add((person_uri, schema.hasHusband, spouse_uri))
                 g.add((spouse_uri, rdf.type, schema.Person))
-                g.add((spouse_uri, rdfs.label, Literal(spouse)))
+                g.add((spouse_uri, rdfs.label, Literal(spouse,datatype=XSD.string)))
 
         # Add children info if present in data
         if children:
@@ -123,7 +123,7 @@ with open('Agent_Role_Data.csv', 'r') as csvfile:
                 child_uri = fam[child.strip()]
                 g.add((person_uri, schema.hasChild, child_uri))
                 g.add((child_uri, rdf.type, schema.Person))
-                g.add((child_uri, rdfs.label, Literal(child)))
+                g.add((child_uri, rdfs.label, Literal(child,datatype=XSD.string)))
 
 # Serializing the graph into turtle format to query using SPARQL
 output_file = "family_graph_agent_roles.ttl"
