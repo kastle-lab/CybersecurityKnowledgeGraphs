@@ -53,11 +53,12 @@ fam:Renuka_MotherRole_Begin a time:Instant ;
     time:inXSDDate "1989"^^xsd:gYear .
 
 fam:Samatha a schema1:Person ;
-    rdfs:label "Samatha" ;
+    rdfs:label "Samatha"^^xsd:string ;
     schema1:dateOfBirth "2000-01-01"^^xsd:date ;
-    schema1:gender "Female" ;
+    schema1:gender "Female"^^xsd:string ;
     schema1:hasAge 22 ;
     schema1:hasHusband fam:Satish ;
+    schema1:hasName "Samatha"^^xsd:string ;
     schema1:hasRole fam:Samatha_ChildRole,
         fam:Samatha_MarriageRole .
 
@@ -122,87 +123,93 @@ fam:Venkateswarlu_MarriageRole_Begin a time:Instant ;
     time:inXSDDate "1985"^^xsd:gYear .
 
 fam:Shanti a schema1:Person ;
-    rdfs:label "Shanti" ;
+    rdfs:label "Shanti"^^xsd:string ;
     fam:isMotherOf fam:Atharv ;
     schema1:dateOfBirth "1991-01-01"^^xsd:date ;
-    schema1:gender "Female" ;
+    schema1:gender "Female"^^xsd:string ;
     schema1:hasAge 32 ;
     schema1:hasChild fam:Atharv ;
     schema1:hasHusband fam:Anil ;
+    schema1:hasName "Shanti"^^xsd:string ;
     schema1:hasRole fam:Shanti_ChildRole,
         fam:Shanti_MarriageRole,
         fam:Shanti_MotherRole .
 
 fam:Atharv a schema1:Person ;
-    rdfs:label "Atharv" ;
+    rdfs:label "Atharv"^^xsd:string ;
     schema1:dateOfBirth "2021-01-01"^^xsd:date ;
     schema1:father fam:Anil ;
-    schema1:gender "Male" ;
+    schema1:gender "Male"^^xsd:string ;
     schema1:hasAge 2 ;
+    schema1:hasName "Atharv"^^xsd:string ;
     schema1:hasRole fam:Atharv_ChildRole ;
     schema1:mother fam:Shanti .
 
 fam:Rakesh a schema1:Person ;
-    rdfs:label "Rakesh" ;
+    rdfs:label "Rakesh"^^xsd:string ;
     schema1:dateOfBirth "1999-01-01"^^xsd:date ;
     schema1:father fam:Venkateswarlu ;
-    schema1:gender "Male" ;
+    schema1:gender "Male"^^xsd:string ;
     schema1:hasAge 24 ;
+    schema1:hasName "Rakesh"^^xsd:string ;
     schema1:hasRole fam:Rakesh_ChildRole ;
     schema1:mother fam:Renuka .
 
 fam:Renuka a schema1:Person ;
-    rdfs:label "Renuka" ;
+    rdfs:label "Renuka"^^xsd:string ;
     fam:isMotherOf fam:Anil,
         fam:Rakesh,
         fam:Satish ;
     schema1:dateOfBirth "1974-01-01"^^xsd:date ;
-    schema1:gender "Female" ;
+    schema1:gender "Female"^^xsd:string ;
     schema1:hasAge 50 ;
     schema1:hasChild fam:Anil,
         fam:Rakesh,
         fam:Satish ;
     schema1:hasHusband fam:Venkateswarlu ;
+    schema1:hasName "Renuka"^^xsd:string ;
     schema1:hasRole fam:Renuka_ChildRole,
         fam:Renuka_MarriageRole,
         fam:Renuka_MotherRole .
 
 fam:Venkateswarlu a schema1:Person ;
-    rdfs:label "Venkateswarlu" ;
+    rdfs:label "Venkateswarlu"^^xsd:string ;
     fam:isFatherOf fam:Anil,
         fam:Rakesh,
         fam:Satish ;
     schema1:dateOfBirth "1964-01-01"^^xsd:date ;
-    schema1:gender "Male" ;
+    schema1:gender "Male"^^xsd:string ;
     schema1:hasAge 60 ;
     schema1:hasChild fam:Anil,
         fam:Rakesh,
         fam:Satish ;
+    schema1:hasName "Venkateswarlu"^^xsd:string ;
     schema1:hasRole fam:Venkateswarlu_ChildRole,
         fam:Venkateswarlu_FatherRole,
         fam:Venkateswarlu_MarriageRole ;
     schema1:hasWife fam:Renuka .
 
 fam:Satish a schema1:Person ;
-    rdfs:label "Satish",
-        "Satish " ;
+    rdfs:label "Satish"^^xsd:string ;
     schema1:dateOfBirth "1991-01-01"^^xsd:date ;
     schema1:father fam:Venkateswarlu ;
-    schema1:gender "Male" ;
+    schema1:gender "Male"^^xsd:string ;
     schema1:hasAge 32 ;
+    schema1:hasName "Satish "^^xsd:string ;
     schema1:hasRole fam:Satish_ChildRole,
         fam:Satish_MarriageRole ;
     schema1:hasWife fam:Samatha ;
     schema1:mother fam:Renuka .
 
 fam:Anil a schema1:Person ;
-    rdfs:label "Anil" ;
+    rdfs:label "Anil"^^xsd:string ;
     fam:isFatherOf fam:Atharv ;
     schema1:dateOfBirth "1989-01-01"^^xsd:date ;
     schema1:father fam:Venkateswarlu ;
-    schema1:gender "Male" ;
+    schema1:gender "Male"^^xsd:string ;
     schema1:hasAge 34 ;
     schema1:hasChild fam:Atharv ;
+    schema1:hasName "Anil"^^xsd:string ;
     schema1:hasRole fam:Anil_ChildRole,
         fam:Anil_FatherRole,
         fam:Anil_MarriageRole ;

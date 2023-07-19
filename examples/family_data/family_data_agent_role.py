@@ -41,7 +41,7 @@ with open('Agent_Role_Data.csv', 'r') as csvfile:
 
         # Adding triples related to the person
         g.add((person_uri, rdf.type, schema.Person))
-        g.add((person_uri, rdfs.label, Literal(name,datatype=XSD.string)))
+        g.add((person_uri, schema.hasName, Literal(name,datatype=XSD.string)))
         g.add((person_uri, schema.hasAge, Literal(age, datatype=XSD.integer)))
         g.add((person_uri, schema.gender, Literal(gender,datatype=XSD.string)))
         g.add((person_uri, schema.dateOfBirth, Literal(dob, datatype=XSD.date)))
