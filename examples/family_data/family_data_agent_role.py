@@ -66,7 +66,7 @@ with open('Agent_Role_Data.csv', 'r') as csvfile:
             g.add((URIRef(mother_extent_uri + "_Begin"), time.inXSDDate, Literal(parent_te, datatype=XSD.gYear)))
             g.add((person_uri, schema.hasRole, mother_extent_uri))
 
-        # Define temporal extent for marriage role, it just has the start time(as of now as no one is divorced till now, hope it just contains the start date only)
+        # Define temporal extent for marriage role, it just has the start time, as they are still married.
         if spouse and marriage_te:
             marriage_extent_uri = fam[name.strip() + "_MarriageRole"]
             g.add((marriage_extent_uri, rdf.type, time.Interval))
