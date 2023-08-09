@@ -1,0 +1,29 @@
+Product,Part,IndustrialFacility,Location,Government
+Iphone,Processor,TSMC,Taiwan,Democratic Progressive Party
+Iphone,Screen,Samsung Display,South Korea,Liberal Democratic Party
+Iphone,Battery,LG Chem,South Korea,Liberal Democratic Party
+Iphone,Camera,Sony Manufacturing Facility,Japan,Liberal Democratic Party
+Iphone,Chassis,Foxconn,Vietnam,Communist Party of Vietnam
+Iphone,Connectors,Amphenol,USA,Democratic Party
+Galaxy S21,Processor,Samsung Electronics Plant,South Korea,Liberal Democratic Party
+Galaxy S21,Screen,Samsung Display,South Korea,Liberal Democratic Party
+Galaxy S21,Battery,LG Chem,South Korea,Liberal Democratic Party
+Galaxy S21,Camera,Sony Manufacturing Facility,Japan,Liberal Democratic Party
+Galaxy S21,Chassis,Foxconn,Vietnam,Communist Party of Vietnam
+Galaxy S21,Connectors,Amphenol,USA,Democratic Party
+PlayStation 5,Processor,Sony Manufacturing Facility,Japan,Liberal Democratic Party
+PlayStation 5,Graphics Card,NVIDIA,Taiwan,Democratic Progressive Party
+PlayStation 5,Memory,Samsung Electronics Plant,South Korea,Liberal Democratic Party
+PlayStation 5,Storage,Western Digital,USA,Democratic Party
+Surface Laptop,Processor,Intel Manufacturing Plant,USA,Democratic Party
+Surface Laptop,Screen,LG Display,South Korea,Liberal Democratic Party
+Surface Laptop,Battery,LG Chem,South Korea,Liberal Democratic Party
+Surface Laptop,Keyboard,Chicony Electronics,Taiwan,Kuomintang
+Pixel Phone,Processor,Qualcomm,USA,Democratic Party
+Pixel Phone,Screen,Samsung Display,South Korea,Liberal Democratic Party
+Pixel Phone,Battery,LG Chem,South Korea,Liberal Democratic Party
+Pixel Phone,Camera,Sony Manufacturing Facility,Japan,Liberal Democratic Party
+Ryzen Processors,Core Components,TSMC,Taiwan,Democratic Progressive Party
+Ryzen Processors,Graphics Card,AMD,USA,Democratic Party
+Ryzen Processors,Memory,Samsung Electronics Plant,South Korea,Liberal Democratic Party
+Ryzen Processors,Storage,Western Digital,USA,Democratic Party

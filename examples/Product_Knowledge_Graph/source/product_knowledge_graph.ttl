@@ -1,0 +1,323 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix supply_chain: <https://kastle-lab.org/ontology/supply_chain#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+supply_chain:Apple a schema1:Organization ;
+    rdfs:label "Apple"^^xsd:string ;
+    schema1:acquires supply_chain:A_Series,
+        supply_chain:Iphone .
+
+supply_chain:Communist_Party_of_Vietnam schema1:hasTrustScore "0.75"^^xsd:float .
+
+supply_chain:Democratic_Party schema1:hasTrustScore "0.85"^^xsd:float .
+
+supply_chain:Democratic_Progressive_Party schema1:hasTrustScore "0.75"^^xsd:float .
+
+supply_chain:Google a schema1:Organization ;
+    rdfs:label "Google"^^xsd:string ;
+    schema1:acquires supply_chain:Pixel_Phone .
+
+supply_chain:Intel a schema1:Organization ;
+    rdfs:label "Intel"^^xsd:string ;
+    schema1:acquires supply_chain:Processors .
+
+supply_chain:Kuomintang schema1:hasTrustScore "0.75"^^xsd:float .
+
+supply_chain:Liberal_Democratic_Party schema1:hasTrustScore "0.8"^^xsd:float,
+        "0.84"^^xsd:float .
+
+supply_chain:Microsoft a schema1:Organization ;
+    rdfs:label "Microsoft"^^xsd:string ;
+    schema1:acquires supply_chain:Surface_Laptop .
+
+supply_chain:Samsung a schema1:Organization ;
+    rdfs:label "Samsung"^^xsd:string ;
+    schema1:acquires supply_chain:Galaxy_S21 .
+
+supply_chain:Sony a schema1:Organization ;
+    rdfs:label "Sony"^^xsd:string ;
+    schema1:acquires supply_chain:PlayStation_5 .
+
+supply_chain:Core_Components a schema1:Part ;
+    rdfs:label "Core Components"^^xsd:string ;
+    schema1:hasGovernment "Democratic Progressive Party"^^xsd:string ;
+    schema1:isMadeIn supply_chain:TSMC .
+
+supply_chain:Foxcon a schema1:IndustrialFacility ;
+    rdfs:label "Foxcon"^^xsd:string ;
+    schema1:hasGovernment "Communist Party of Vietnam"^^xsd:string ;
+    schema1:produces supply_chain:Iphone ;
+    schema1:residesInCountry "Vietnam"^^xsd:string .
+
+supply_chain:GlobalFoundries a schema1:IndustrialFacility ;
+    rdfs:label "GlobalFoundries"^^xsd:string ;
+    schema1:hasGovernment "Democratic Party"^^xsd:string ;
+    schema1:produces supply_chain:Ryzen_Processors ;
+    schema1:residesInCountry "USA"^^xsd:string .
+
+supply_chain:Japan a schema1:Country ;
+    schema1:hasGovernment "Liberal Democratic Party"^^xsd:string .
+
+supply_chain:Keyboard a schema1:Part ;
+    rdfs:label "Keyboard"^^xsd:string ;
+    schema1:hasGovernment "Kuomintang"^^xsd:string ;
+    schema1:isMadeIn supply_chain:Chicony_Electronics .
+
+supply_chain:Microsoft_Assembly_Plant a schema1:IndustrialFacility ;
+    rdfs:label "Microsoft Assembly Plant"^^xsd:string ;
+    schema1:hasGovernment "Democratic Party"^^xsd:string ;
+    schema1:produces supply_chain:Surface_Laptop ;
+    schema1:residesInCountry "USA"^^xsd:string .
+
+supply_chain:Shenzhen_Assembly_Plant a schema1:IndustrialFacility ;
+    rdfs:label "Shenzhen Assembly Plant"^^xsd:string ;
+    schema1:hasGovernment "Chinese Communist Party"^^xsd:string ;
+    schema1:produces supply_chain:Iphone ;
+    schema1:residesInCountry "China"^^xsd:string .
+
+supply_chain:Tata_Industries a schema1:IndustrialFacility ;
+    rdfs:label "Tata Industries"^^xsd:string ;
+    schema1:hasGovernment "BJP"^^xsd:string ;
+    schema1:produces supply_chain:Iphone ;
+    schema1:residesInCountry "India"^^xsd:string .
+
+supply_chain:Vietnam a schema1:Country ;
+    schema1:hasGovernment "Communist Party of Vietnam"^^xsd:string .
+
+supply_chain:AMD a schema1:Organization ;
+    rdfs:label "AMD"^^xsd:string ;
+    schema1:acquires supply_chain:Ryzen_Processors ;
+    schema1:residesInCountry supply_chain:USA .
+
+supply_chain:A_Series a schema1:Product ;
+    rdfs:label "A_Series"^^xsd:string ;
+    schema1:isManufacturedAt supply_chain:TSMC .
+
+supply_chain:Chassis a schema1:Part ;
+    rdfs:label "Chassis"^^xsd:string ;
+    schema1:hasGovernment "Communist Party of Vietnam"^^xsd:string ;
+    schema1:isMadeIn supply_chain:Foxconn .
+
+supply_chain:Chicony_Electronics schema1:residesInCountry supply_chain:Taiwan .
+
+supply_chain:Chips a schema1:Product ;
+    rdfs:label "Chips"^^xsd:string ;
+    schema1:isManufacturedAt supply_chain:TSMC .
+
+supply_chain:Connectors a schema1:Part ;
+    rdfs:label "Connectors"^^xsd:string ;
+    schema1:hasGovernment "Democratic Party"^^xsd:string ;
+    schema1:isMadeIn supply_chain:Amphenol .
+
+supply_chain:Graphics_Card a schema1:Part ;
+    rdfs:label "Graphics Card"^^xsd:string ;
+    schema1:hasGovernment "Democratic Party"^^xsd:string,
+        "Democratic Progressive Party"^^xsd:string ;
+    schema1:isMadeIn supply_chain:AMD,
+        supply_chain:NVIDIA .
+
+supply_chain:Hanoi_Assembly_Plant a schema1:IndustrialFacility ;
+    rdfs:label "Hanoi Assembly Plant"^^xsd:string ;
+    schema1:hasGovernment "Communist Party of Vietnam"^^xsd:string ;
+    schema1:produces supply_chain:Galaxy_S21,
+        supply_chain:Pixel_Phone ;
+    schema1:residesInCountry "Vietnam"^^xsd:string .
+
+supply_chain:LG_Display schema1:residesInCountry supply_chain:South_Korea .
+
+supply_chain:Memory a schema1:Part ;
+    rdfs:label "Memory"^^xsd:string ;
+    schema1:hasGovernment "Liberal Democratic Party"^^xsd:string ;
+    schema1:isMadeIn supply_chain:Samsung_Electronics_Plant .
+
+supply_chain:NVIDIA a schema1:Organization ;
+    rdfs:label "NVIDIA"^^xsd:string ;
+    schema1:acquires supply_chain:Chips ;
+    schema1:residesInCountry supply_chain:Taiwan .
+
+supply_chain:Qualcomm schema1:residesInCountry supply_chain:USA .
+
+supply_chain:Storage a schema1:Part ;
+    rdfs:label "Storage"^^xsd:string ;
+    schema1:hasGovernment "Democratic Party"^^xsd:string ;
+    schema1:isMadeIn supply_chain:Western_Digital .
+
+supply_chain:Amphenol schema1:residesInCountry supply_chain:USA .
+
+supply_chain:Camera a schema1:Part ;
+    rdfs:label "Camera"^^xsd:string ;
+    schema1:hasGovernment "Liberal Democratic Party"^^xsd:string ;
+    schema1:isMadeIn supply_chain:Sony_Manufacturing_Facility .
+
+supply_chain:Intel_Manufacturing_Plant a schema1:IndustrialFacility ;
+    rdfs:label "Intel Manufacturing Plant"^^xsd:string ;
+    schema1:hasGovernment "Democratic Party"^^xsd:string ;
+    schema1:produces supply_chain:Processors ;
+    schema1:residesInCountry supply_chain:USA,
+        "USA"^^xsd:string .
+
+supply_chain:Pixel_Phone a schema1:Product ;
+    rdfs:label "Pixel Phone"^^xsd:string ;
+    schema1:hasPart supply_chain:Battery,
+        supply_chain:Camera,
+        supply_chain:Processor,
+        supply_chain:Screen ;
+    schema1:isManufacturedAt supply_chain:Foxconn,
+        supply_chain:Hanoi_Assembly_Plant,
+        supply_chain:LG_Chem,
+        supply_chain:Qualcomm,
+        supply_chain:Samsung_Display,
+        supply_chain:Sony_Manufacturing_Facility .
+
+supply_chain:PlayStation_5 a schema1:Product ;
+    rdfs:label "PlayStation 5"^^xsd:string ;
+    schema1:hasPart supply_chain:Graphics_Card,
+        supply_chain:Memory,
+        supply_chain:Processor,
+        supply_chain:Storage ;
+    schema1:isManufacturedAt supply_chain:Foxconn,
+        supply_chain:NVIDIA,
+        supply_chain:Samsung_Electronics_Plant,
+        supply_chain:Sony_Manufacturing_Facility,
+        supply_chain:Western_Digital .
+
+supply_chain:Processors a schema1:Product ;
+    rdfs:label "Processors"^^xsd:string ;
+    schema1:isManufacturedAt supply_chain:Intel_Manufacturing_Plant,
+        supply_chain:TSMC .
+
+supply_chain:Ryzen_Processors a schema1:Product ;
+    rdfs:label "Ryzen Processors"^^xsd:string ;
+    schema1:hasPart supply_chain:Core_Components,
+        supply_chain:Graphics_Card,
+        supply_chain:Memory,
+        supply_chain:Storage ;
+    schema1:isManufacturedAt supply_chain:AMD,
+        supply_chain:GlobalFoundries,
+        supply_chain:Samsung_Electronics_Plant,
+        supply_chain:TSMC,
+        supply_chain:Western_Digital .
+
+supply_chain:Surface_Laptop a schema1:Product ;
+    rdfs:label "Surface Laptop"^^xsd:string ;
+    schema1:hasPart supply_chain:Battery,
+        supply_chain:Keyboard,
+        supply_chain:Processor,
+        supply_chain:Screen ;
+    schema1:isManufacturedAt supply_chain:Chicony_Electronics,
+        supply_chain:Foxconn,
+        supply_chain:Intel_Manufacturing_Plant,
+        supply_chain:LG_Chem,
+        supply_chain:LG_Display,
+        supply_chain:Microsoft_Assembly_Plant .
+
+supply_chain:Taiwan a schema1:Country ;
+    schema1:hasGovernment "Democratic Progressive Party"^^xsd:string,
+        "Kuomintang"^^xsd:string .
+
+supply_chain:Western_Digital schema1:residesInCountry supply_chain:USA .
+
+supply_chain:Battery a schema1:Part ;
+    rdfs:label "Battery"^^xsd:string ;
+    schema1:hasGovernment "Liberal Democratic Party"^^xsd:string ;
+    schema1:isMadeIn supply_chain:LG_Chem .
+
+supply_chain:Galaxy_S21 a schema1:Product ;
+    rdfs:label "Galaxy S21"^^xsd:string ;
+    schema1:hasPart supply_chain:Battery,
+        supply_chain:Camera,
+        supply_chain:Chassis,
+        supply_chain:Connectors,
+        supply_chain:Processor,
+        supply_chain:Screen ;
+    schema1:isManufacturedAt supply_chain:Amphenol,
+        supply_chain:Foxconn,
+        supply_chain:Hanoi_Assembly_Plant,
+        supply_chain:LG_Chem,
+        supply_chain:Samsung_Display,
+        supply_chain:Samsung_Electronics_Plant,
+        supply_chain:Sony_Manufacturing_Facility .
+
+supply_chain:Iphone a schema1:Product ;
+    rdfs:label "Iphone"^^xsd:string ;
+    schema1:hasPart supply_chain:Battery,
+        supply_chain:Camera,
+        supply_chain:Chassis,
+        supply_chain:Connectors,
+        supply_chain:Processor,
+        supply_chain:Screen ;
+    schema1:isManufacturedAt supply_chain:Amphenol,
+        supply_chain:Foxcon,
+        supply_chain:Foxconn,
+        supply_chain:LG_Chem,
+        supply_chain:Samsung_Display,
+        supply_chain:Shenzhen_Assembly_Plant,
+        supply_chain:Sony_Manufacturing_Facility,
+        supply_chain:TSMC,
+        supply_chain:Tata_Industries .
+
+supply_chain:Samsung_Display schema1:residesInCountry supply_chain:South_Korea .
+
+supply_chain:Screen a schema1:Part ;
+    rdfs:label "Screen"^^xsd:string ;
+    schema1:hasGovernment "Liberal Democratic Party"^^xsd:string ;
+    schema1:isMadeIn supply_chain:LG_Display,
+        supply_chain:Samsung_Display .
+
+supply_chain:South_Korea a schema1:Country ;
+    schema1:hasGovernment "Liberal Democratic Party"^^xsd:string .
+
+supply_chain:LG_Chem schema1:residesInCountry supply_chain:South_Korea .
+
+supply_chain:Processor a schema1:Part ;
+    rdfs:label "Processor"^^xsd:string ;
+    schema1:hasGovernment "Democratic Party"^^xsd:string,
+        "Democratic Progressive Party"^^xsd:string,
+        "Liberal Democratic Party"^^xsd:string ;
+    schema1:isMadeIn supply_chain:Intel_Manufacturing_Plant,
+        supply_chain:Qualcomm,
+        supply_chain:Samsung_Electronics_Plant,
+        supply_chain:Sony_Manufacturing_Facility,
+        supply_chain:TSMC .
+
+supply_chain:Samsung_Electronics_Plant a schema1:IndustrialFacility ;
+    rdfs:label "Samsung Electronics Plant"^^xsd:string ;
+    schema1:hasGovernment "Liberal Democratic Party"^^xsd:string ;
+    schema1:produces supply_chain:Galaxy_S21 ;
+    schema1:residesInCountry supply_chain:South_Korea,
+        "South Korea"^^xsd:string .
+
+supply_chain:USA a schema1:Country ;
+    schema1:hasGovernment "Democratic Party"^^xsd:string .
+
+supply_chain:Foxconn a schema1:IndustrialFacility ;
+    rdfs:label "Foxconn"^^xsd:string ;
+    schema1:hasGovernment "Communist Party of Vietnam"^^xsd:string,
+        "Democratic Progressive Party"^^xsd:string,
+        "Kuomintang"^^xsd:string ;
+    schema1:produces supply_chain:Galaxy_S21,
+        supply_chain:Pixel_Phone,
+        supply_chain:PlayStation_5,
+        supply_chain:Surface_Laptop ;
+    schema1:residesInCountry supply_chain:Vietnam,
+        "Taiwan"^^xsd:string,
+        "Vietnam"^^xsd:string .
+
+supply_chain:Sony_Manufacturing_Facility a schema1:IndustrialFacility ;
+    rdfs:label "Sony Manufacturing Facility"^^xsd:string ;
+    schema1:hasGovernment "Liberal Democratic Party"^^xsd:string ;
+    schema1:produces supply_chain:PlayStation_5 ;
+    schema1:residesInCountry supply_chain:Japan,
+        "Japan"^^xsd:string .
+
+supply_chain:TSMC a schema1:IndustrialFacility ;
+    rdfs:label "TSMC"^^xsd:string ;
+    schema1:hasGovernment "Democratic Progressive Party"^^xsd:string ;
+    schema1:produces supply_chain:A_Series,
+        supply_chain:Chips,
+        supply_chain:Processors,
+        supply_chain:Ryzen_Processors ;
+    schema1:residesInCountry supply_chain:Taiwan,
+        "Taiwan"^^xsd:string .
+

@@ -1,0 +1,19 @@
+Organization,Product,IndustrialFacility,Location,Government
+Apple,Iphone,Shenzhen Assembly Plant,China,Chinese Communist Party
+Apple,Iphone,Foxcon,Vietnam,Communist Party of Vietnam
+Apple,Iphone,Tata Industries,India,BJP
+NVIDIA,Chips,TSMC,Taiwan,Democratic Progressive Party
+Apple,A_Series,TSMC,Taiwan,Democratic Progressive Party
+Samsung,Galaxy S21,Samsung Electronics Plant,South Korea,Liberal Democratic Party
+Samsung,Galaxy S21,Foxconn,Taiwan,Democratic Progressive Party
+Samsung,Galaxy S21,Hanoi Assembly Plant,Vietnam,Communist Party of Vietnam
+Sony,PlayStation 5,Sony Manufacturing Facility,Japan,Liberal Democratic Party
+Sony,PlayStation 5,Foxconn,Taiwan,Democratic Progressive Party
+Microsoft,Surface Laptop,Foxconn,Vietnam,Communist Party of Vietnam
+Microsoft,Surface Laptop,Microsoft Assembly Plant,USA,Democratic Party
+Google,Pixel Phone,Foxconn,Taiwan,Kuomintang
+Google,Pixel Phone,Hanoi Assembly Plant,Vietnam,Communist Party of Vietnam
+Intel,Processors,Intel Manufacturing Plant,USA,Democratic Party
+Intel,Processors,TSMC,Taiwan,Democratic Progressive Party
+AMD,Ryzen Processors,GlobalFoundries,USA,Democratic Party
+AMD,Ryzen Processors,TSMC,Taiwan,Democratic Progressive Party
