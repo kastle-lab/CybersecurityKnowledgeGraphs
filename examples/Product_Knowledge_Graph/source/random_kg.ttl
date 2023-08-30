@@ -1,0 +1,95 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix supply_chain: <https://kastle-lab.org/ontology/> .
+
+supply_chain:N_1 a schema1:Product ;
+    rdfs:label "N_1" ;
+    schema1:hasPart supply_chain:P_1,
+        supply_chain:P_2,
+        supply_chain:P_3,
+        supply_chain:P_4,
+        supply_chain:P_5,
+        supply_chain:P_6,
+        supply_chain:P_7,
+        supply_chain:P_8,
+        supply_chain:P_9 .
+
+supply_chain:N_2 a schema1:Product ;
+    rdfs:label "N_2" ;
+    schema1:hasPart supply_chain:P_3,
+        supply_chain:P_4,
+        supply_chain:P_7,
+        supply_chain:P_9 .
+
+supply_chain:N_3 a schema1:Product ;
+    rdfs:label "N_3" ;
+    schema1:hasPart supply_chain:P_1,
+        supply_chain:P_3,
+        supply_chain:P_4,
+        supply_chain:P_6,
+        supply_chain:P_7,
+        supply_chain:P_8,
+        supply_chain:P_9 .
+
+supply_chain:N_4 a schema1:Product ;
+    rdfs:label "N_4" ;
+    schema1:hasPart supply_chain:P_1,
+        supply_chain:P_4,
+        supply_chain:P_7,
+        supply_chain:P_8,
+        supply_chain:P_9 .
+
+supply_chain:N_5 a schema1:Product ;
+    rdfs:label "N_5" ;
+    schema1:hasPart supply_chain:P_1,
+        supply_chain:P_2,
+        supply_chain:P_3,
+        supply_chain:P_4,
+        supply_chain:P_5,
+        supply_chain:P_6,
+        supply_chain:P_7,
+        supply_chain:P_8,
+        supply_chain:P_9 .
+
+supply_chain:P_2 a schema1:Part ;
+    rdfs:label "P_2" .
+
+supply_chain:P_5 a schema1:Part ;
+    rdfs:label "P_5" ;
+    schema1:isPartOf supply_chain:P_4,
+        supply_chain:P_6,
+        supply_chain:P_7,
+        supply_chain:P_8 .
+
+supply_chain:P_1 a schema1:Part ;
+    rdfs:label "P_1" ;
+    schema1:isPartOf supply_chain:P_4,
+        supply_chain:P_8,
+        supply_chain:P_9 .
+
+supply_chain:P_3 a schema1:Part ;
+    rdfs:label "P_3" ;
+    schema1:isPartOf supply_chain:P_7,
+        supply_chain:P_9 .
+
+supply_chain:P_6 a schema1:Part ;
+    rdfs:label "P_6" ;
+    schema1:isPartOf supply_chain:P_4,
+        supply_chain:P_7,
+        supply_chain:P_8,
+        supply_chain:P_9 .
+
+supply_chain:P_8 a schema1:Part ;
+    rdfs:label "P_8" ;
+    schema1:isPartOf supply_chain:P_4,
+        supply_chain:P_7 .
+
+supply_chain:P_9 a schema1:Part ;
+    rdfs:label "P_9" .
+
+supply_chain:P_4 a schema1:Part ;
+    rdfs:label "P_4" .
+
+supply_chain:P_7 a schema1:Part ;
+    rdfs:label "P_7" .
+
