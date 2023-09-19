@@ -7,6 +7,7 @@ g = Graph()
 
 # Define RDF namespaces
 product_entity = Namespace("https://kastle-lab.org/ontology/")
+gnis = Namespace("http://gnis-ld.org/lod/gnis/ontology/country")
 schema = Namespace("http://schema.org/")
 rdf = RDF
 rdfs = RDFS
@@ -16,6 +17,7 @@ g.bind("supply_chain", product_entity)
 g.bind("schema", schema)
 g.bind("rdf", rdf)
 g.bind("rdfs", rdfs)
+g.bind("gnis",gnis)
 
 #function to generate the products and parts in a sequence
 def generate_products_and_parts(N,P):
@@ -78,6 +80,12 @@ def gen_manfacturing_data():
     manufacturing_units = ["FoxconnUnit", "TataIndustriesUnit", "AppleUnit", "NvidiaUnit", "TSMCUnit","3MUnit","Intel","Redington"]
     organizations = ["Apple", "Samsung", "Nvidia", "Acer", "Asus","AMD","Intel","Redington"]
 
+    #creating country uris
+    for country in countries:
+        country_uri = gnis[country]
+        g.add((country_uri, rdf.type, schema.Country))
+        g.add((country_uri, rdfs.label, Literal(country)))
+
     manufactured_data={}
     
     manufactured_data["countryOfAssembly"] = random.choice(countries)
@@ -94,14 +102,21 @@ def create_and_serialize_knowledge_graph(products, parts):
 
     for product in products:
         product_uri = product_entity[product]
+        
         g.add((product_uri, rdf.type, schema.Product))
         g.add((product_uri, rdfs.label, Literal(product)))
+        
         #function call to generate the product details
         product_details = gen_manfacturing_data()
-        g.add((product_uri, schema.countryOfAssembly, Literal(product_details["countryOfAssembly"])))
-        g.add((product_uri, schema.countryOfLastProcessing,Literal(product_details["countryOfLastProcessing"])))
-        g.add((product_uri, schema.countryOfOrigin, Literal(product_details["countryOfOrigin"])))
-        g.add((product_uri, schema.manufacturer,Literal(product_details["manufacturer"])))
+        #organization uri
+        org_uri = product_entity[product_details["manufacturer"]]
+        g.add((org_uri, rdf.type, schema.Organization))
+        g.add((org_uri, rdfs.label, Literal(product_details["manufacturer"])))
+        #adding manufacturing details to the knwoledge graph
+        g.add((product_uri, schema.countryOfAssembly, gnis[product_details["countryOfAssembly"]]))
+        g.add((product_uri, schema.countryOfLastProcessing,gnis[product_details["countryOfLastProcessing"]]))
+        g.add((product_uri, schema.countryOfOrigin, gnis[product_details["countryOfOrigin"]]))
+        g.add((product_uri, schema.manufacturer,org_uri))
         num_parts = random.randint(1, len(parts)//2)
         selected_parts = random.sample(parts, num_parts)
 
@@ -112,10 +127,15 @@ def create_and_serialize_knowledge_graph(products, parts):
         part_uri = product_entity[part]
         #function call to generate the part details
         product_details = gen_manfacturing_data()
-        g.add((part_uri, schema.countryOfAssembly, Literal(product_details["countryOfAssembly"])))
-        g.add((part_uri, schema.countryOfLastProcessing,Literal(product_details["countryOfLastProcessing"])))
-        g.add((part_uri, schema.countryOfOrigin, Literal(product_details["countryOfOrigin"])))
-        g.add((part_uri, schema.manufacturer,Literal(product_details["manufacturer"])))
+        #organization uri
+        org_uri = product_entity[product_details["manufacturer"]]
+        g.add((org_uri, rdf.type, schema.Organization))
+        g.add((org_uri, rdfs.label, Literal(product_details["manufacturer"])))
+        #adding manufacturing details to the knwoledge graph
+        g.add((part_uri, schema.countryOfAssembly, gnis[product_details["countryOfAssembly"]]))
+        g.add((part_uri, schema.countryOfLastProcessing,gnis[product_details["countryOfLastProcessing"]]))
+        g.add((part_uri, schema.countryOfOrigin, gnis[product_details["countryOfOrigin"]]))
+        g.add((part_uri, schema.manufacturer,org_uri))
         for related_part in related_parts:
             related_part_uri = product_entity[related_part]
             g.add((part_uri, rdf.type, schema.Part))
