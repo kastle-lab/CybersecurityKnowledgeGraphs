@@ -1,0 +1,214 @@
+@prefix kastle: <https://kastle-lab.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+
+kastle:BLESA a schema1:Vulnerability ;
+    rdfs:label "BLESA" ;
+    kastle:affects kastle:Bluetooth_Chip .
+
+kastle:BadUSB a schema1:Vulnerability ;
+    rdfs:label "BadUSB" ;
+    kastle:affects kastle:USB_Controller .
+
+kastle:BlackNurse a schema1:Vulnerability ;
+    rdfs:label "BlackNurse" ;
+    kastle:affects kastle:Firewall .
+
+kastle:Blaster a schema1:Vulnerability ;
+    rdfs:label "Blaster" .
+
+kastle:BlueBorne a schema1:Vulnerability ;
+    rdfs:label "BlueBorne" ;
+    kastle:affects kastle:Network_Card .
+
+kastle:BootHole a schema1:Vulnerability ;
+    rdfs:label "BootHole" ;
+    kastle:affects kastle:BIOS .
+
+kastle:CPU_Cooler a schema1:Product ;
+    rdfs:label "CPU_Cooler" .
+
+kastle:Camera a schema1:Product ;
+    rdfs:label "Camera" .
+
+kastle:Chassis a schema1:Product ;
+    rdfs:label "Chassis" .
+
+kastle:Code_Red a schema1:Vulnerability ;
+    rdfs:label "Code_Red" .
+
+kastle:CryptoLocker a schema1:Vulnerability ;
+    rdfs:label "CryptoLocker" .
+
+kastle:DirtyCow a schema1:Vulnerability ;
+    rdfs:label "DirtyCow" ;
+    kastle:affects kastle:Kernel .
+
+kastle:EternalBlue a schema1:Vulnerability ;
+    rdfs:label "EternalBlue" ;
+    kastle:affects kastle:Server .
+
+kastle:External_Storage a schema1:Product ;
+    rdfs:label "External_Storage" .
+
+kastle:Foreshadow a schema1:Vulnerability ;
+    rdfs:label "Foreshadow" ;
+    kastle:affects kastle:Intel_i7,
+        kastle:M2_chip .
+
+kastle:FragAttacks a schema1:Vulnerability ;
+    rdfs:label "FragAttacks" ;
+    kastle:affects kastle:Wi-Fi_Adapter .
+
+kastle:GPU a schema1:Product ;
+    rdfs:label "GPU" .
+
+kastle:Graphics_Card a schema1:Product ;
+    rdfs:label "Graphics_Card" .
+
+kastle:Heartbleed a schema1:Vulnerability ;
+    rdfs:label "Heartbleed" ;
+    kastle:affects kastle:Motherboard .
+
+kastle:Heat_Sink a schema1:Product ;
+    rdfs:label "Heat_Sink" .
+
+kastle:ILOVEYOU a schema1:Vulnerability ;
+    rdfs:label "ILOVEYOU" ;
+    kastle:affects kastle:Email_Client .
+
+kastle:Keyboard a schema1:Product ;
+    rdfs:label "Keyboard" .
+
+kastle:Kr00k a schema1:Vulnerability ;
+    rdfs:label "Kr00k" ;
+    kastle:affects kastle:Wireless_Card .
+
+kastle:Laptop a schema1:Product ;
+    rdfs:label "Laptop" .
+
+kastle:Meltdown a schema1:Vulnerability ;
+    rdfs:label "Meltdown" ;
+    kastle:affects kastle:CPU,
+        kastle:Intel_i5,
+        kastle:M1_chip .
+
+kastle:Microphone a schema1:Product ;
+    rdfs:label "Microphone" .
+
+kastle:Mirai a schema1:Vulnerability ;
+    rdfs:label "Mirai" ;
+    kastle:affects kastle:IoT_Device .
+
+kastle:Monitor a schema1:Product ;
+    rdfs:label "Monitor" .
+
+kastle:Mouse a schema1:Product ;
+    rdfs:label "Mouse" .
+
+kastle:Mydoom a schema1:Vulnerability ;
+    rdfs:label "Mydoom" .
+
+kastle:Nimda a schema1:Vulnerability ;
+    rdfs:label "Nimda" .
+
+kastle:Optical_Drive a schema1:Product ;
+    rdfs:label "Optical_Drive" .
+
+kastle:Petya a schema1:Vulnerability ;
+    rdfs:label "Petya" ;
+    kastle:affects kastle:Hard_Drive .
+
+kastle:Power_Supply a schema1:Product ;
+    rdfs:label "Power_Supply" .
+
+kastle:Printer a schema1:Product ;
+    rdfs:label "Printer" .
+
+kastle:RAM a schema1:Product ;
+    rdfs:label "RAM" .
+
+kastle:Ripple20 a schema1:Vulnerability ;
+    rdfs:label "Ripple20" ;
+    kastle:affects kastle:Network_Card .
+
+kastle:Router a schema1:Product ;
+    rdfs:label "Router" .
+
+kastle:Rowhammer a schema1:Vulnerability ;
+    rdfs:label "Rowhammer" ;
+    kastle:affects kastle:Memory,
+        kastle:Nvidia_Geforce_GTX,
+        kastle:Nvidia_Geforce_RTX .
+
+kastle:SQL_Slammer a schema1:Vulnerability ;
+    rdfs:label "SQL_Slammer" .
+
+kastle:SSD a schema1:Product ;
+    rdfs:label "SSD" .
+
+kastle:Sasser a schema1:Vulnerability ;
+    rdfs:label "Sasser" .
+
+kastle:Scanner a schema1:Product ;
+    rdfs:label "Scanner" .
+
+kastle:Shellshock a schema1:Vulnerability ;
+    rdfs:label "Shellshock" .
+
+kastle:Slammer a schema1:Vulnerability ;
+    rdfs:label "Slammer" ;
+    kastle:affects kastle:Database_Server .
+
+kastle:Sound_Card a schema1:Product ;
+    rdfs:label "Sound_Card" .
+
+kastle:Speakers a schema1:Product ;
+    rdfs:label "Speakers" .
+
+kastle:Spectre a schema1:Vulnerability ;
+    rdfs:label "Spectre" ;
+    kastle:affects kastle:AMD_Ryzen_9,
+        kastle:CPU,
+        kastle:M1_chip .
+
+kastle:Stuxnet a schema1:Vulnerability ;
+    rdfs:label "Stuxnet" ;
+    kastle:affects kastle:SCADA_System .
+
+kastle:Switch a schema1:Product ;
+    rdfs:label "Switch" .
+
+kastle:Tablet a schema1:Product ;
+    rdfs:label "Tablet" .
+
+kastle:Thunderspy a schema1:Vulnerability ;
+    rdfs:label "Thunderspy" ;
+    kastle:affects kastle:Thunderbolt_Port .
+
+kastle:WannaCry a schema1:Vulnerability ;
+    rdfs:label "WannaCry" ;
+    kastle:affects kastle:Operating_System .
+
+kastle:ZombieLoad a schema1:Vulnerability ;
+    rdfs:label "ZombieLoad" ;
+    kastle:affects kastle:CPU .
+
+kastle:Hard_Drive a schema1:Product ;
+    rdfs:label "Hard_Drive" .
+
+kastle:Memory a schema1:Product ;
+    rdfs:label "Memory" .
+
+kastle:Motherboard a schema1:Product ;
+    rdfs:label "Motherboard" .
+
+kastle:Server a schema1:Product ;
+    rdfs:label "Server" .
+
+kastle:Network_Card a schema1:Product ;
+    rdfs:label "Network_Card" .
+
+kastle:CPU a schema1:Product ;
+    rdfs:label "CPU" .
+
