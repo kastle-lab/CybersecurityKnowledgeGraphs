@@ -1,7 +1,3 @@
 Name,Age,Gender,Father,Mother,Spouse,Children,Occupation,City,Country
-Venkateswarlu,60,Male,,,Renuka,"Anil,Satish,Rakesh",Farmer,Khammam,India
-Renuka,50,Female,,,Venkateswarlu,"Anil,Satish,Rakesh",Homemaker,Khammam,India
-Anil,32,Male,Venkateswarlu,Renuka,Shanti ,Atharv,Product Manager,Hyderabad,India
-Satish ,30,Male,Venkateswarlu,Renuka,Samatha,,Self Employed,Khammam,India
-Rakesh,24,Male,Venkateswarlu,Renuka,,,Student,Fairborn,USA
-Shanti,30,Female,,,Anil,Rishu,Homemaker,Hyderabad,India
+<string>,<integer>,<string>,<string>,<string>,[list],<string>,<string>,<string>,<string>
+
